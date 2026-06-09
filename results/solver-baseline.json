@@ -1,0 +1,6774 @@
+{
+  "summary": {
+    "model": "exact-solver",
+    "total": 840,
+    "correct": 840,
+    "accuracy": 1,
+    "by_kind": {
+      "observational": {
+        "total": 455,
+        "correct": 455
+      },
+      "interventional": {
+        "total": 315,
+        "correct": 315
+      },
+      "counterfactual": {
+        "total": 70,
+        "correct": 70
+      }
+    },
+    "by_graph": {
+      "chain": {
+        "total": 105,
+        "correct": 105
+      },
+      "fork": {
+        "total": 140,
+        "correct": 140
+      },
+      "collider": {
+        "total": 105,
+        "correct": 105
+      },
+      "mbias": {
+        "total": 140,
+        "correct": 140
+      },
+      "instrument": {
+        "total": 140,
+        "correct": 140
+      },
+      "frontdoor": {
+        "total": 105,
+        "correct": 105
+      },
+      "backdoor": {
+        "total": 105,
+        "correct": 105
+      }
+    }
+  },
+  "results": [
+    {
+      "question_id": "q-chain-0",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-1",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-2",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-3",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-4",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-5",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-6",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-7",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-8",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-9",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-10",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-11",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-12",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-13",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-14",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-15",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-16",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-17",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-18",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-19",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-20",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-21",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-22",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-23",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-24",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-25",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-26",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-27",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-28",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-29",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-30",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-31",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-32",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-33",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-34",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-35",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-36",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-37",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-38",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-39",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-40",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-41",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-42",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-43",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-44",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-45",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-46",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-47",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-48",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-49",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-50",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-51",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-52",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-53",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-54",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-55",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-56",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-57",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-58",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-59",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-60",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-61",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-62",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-63",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-64",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-65",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-66",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-67",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-68",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-69",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-70",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-71",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-72",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-73",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-74",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-75",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-76",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-77",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-78",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-79",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-80",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-81",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-82",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-83",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-84",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-85",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-86",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-87",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-88",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-89",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-90",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-91",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-92",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-93",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-94",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-95",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-96",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-97",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-98",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-99",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-100",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-101",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-102",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-103",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-104",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-105",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-106",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-107",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-108",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-109",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-110",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-111",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-112",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-113",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-114",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-115",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-116",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-117",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-118",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-119",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-120",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-121",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-122",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-123",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-124",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-125",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-126",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-127",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-128",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-129",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-130",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-131",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-132",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-133",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-134",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-135",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-136",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-137",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-138",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-139",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-140",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-141",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-142",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-143",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-144",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-145",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-146",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-147",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-148",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-149",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-150",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-151",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-152",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-153",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-154",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-155",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-156",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-157",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-158",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-159",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-160",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-161",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-162",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-163",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-164",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-165",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-166",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-167",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-168",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-169",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-170",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-171",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-172",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-173",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-174",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-175",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-176",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-177",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-178",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-179",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-180",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-181",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-182",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-183",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-184",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-185",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-186",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-187",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-188",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-189",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-190",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-191",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-192",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-193",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-194",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-195",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-196",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-197",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-198",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-199",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-200",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-201",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-202",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-203",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-204",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-205",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-206",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-207",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-208",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-209",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-210",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-211",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-212",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-213",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-214",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-215",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-216",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-217",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-218",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-219",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-220",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-221",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-222",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-223",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-224",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-225",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-226",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-227",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-228",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-229",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-230",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-231",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-232",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-233",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-234",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-235",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-236",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-237",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-238",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-239",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-240",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-241",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-242",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-243",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-244",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-245",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-246",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-247",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-248",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-249",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-250",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-251",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-252",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-253",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-254",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-255",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-256",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-257",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-258",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-259",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-260",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-261",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-262",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-263",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-264",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-265",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-266",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-267",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-268",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-269",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-270",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-271",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-272",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-273",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-274",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-275",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-276",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-277",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-278",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-279",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-280",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-281",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-282",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-283",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-284",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-285",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-286",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-287",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-288",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-289",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-290",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-291",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-292",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-293",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-294",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-295",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-296",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-297",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-298",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-299",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-300",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-301",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-302",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-303",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-304",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-305",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-306",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-307",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-308",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-309",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-310",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-311",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-312",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-313",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-314",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-315",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-316",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-317",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-318",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-319",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-320",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-321",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-322",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-323",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-324",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-325",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-326",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-327",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-328",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-329",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-330",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-331",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-332",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-333",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-334",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-335",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-336",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-337",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-338",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-339",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-340",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-341",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-342",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-343",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-344",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-345",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-346",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-347",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-348",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-349",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-350",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-351",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-352",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-353",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-354",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-355",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-356",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-357",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-358",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-359",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-360",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-361",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-362",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-363",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-364",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-365",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-366",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-367",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-368",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-369",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-370",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-371",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-372",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-373",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-374",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-375",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-376",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-377",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-378",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-379",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-380",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-381",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-382",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-383",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-384",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-385",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-386",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-387",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-388",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-389",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-390",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-391",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-392",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-393",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-394",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-395",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-396",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-397",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-398",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-399",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-400",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-401",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-402",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-403",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-404",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-405",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-406",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-407",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-408",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-409",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-410",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-411",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-412",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-413",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-414",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-415",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-416",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-417",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-418",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-419",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-420",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-421",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-422",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-423",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-424",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-425",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-426",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-427",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-428",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-429",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-430",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-431",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-432",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-433",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-434",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-435",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-436",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-437",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-438",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-439",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-440",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-441",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-442",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-443",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-444",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-445",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-446",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-447",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-448",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-449",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-450",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-451",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-452",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-453",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-454",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-455",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-456",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-457",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-458",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-459",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-460",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-461",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-462",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-463",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-464",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-465",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-466",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-467",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-468",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-469",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-470",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-471",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-472",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-473",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-474",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-475",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-476",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-477",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-478",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-479",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-480",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-481",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-482",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-483",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-484",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-485",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-486",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-487",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-488",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-489",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-490",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-491",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-492",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-493",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-494",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-495",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-496",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-497",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-498",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-499",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-500",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-501",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-502",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-503",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-504",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-505",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-506",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-507",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-508",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-509",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-510",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-511",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-512",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-513",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-514",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-515",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-516",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-517",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-518",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-519",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-520",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-521",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-522",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-523",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-524",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-525",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-526",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-527",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-528",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-529",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-530",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-531",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-532",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-533",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-534",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-535",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-536",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-537",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-538",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-539",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-540",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-541",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-542",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-543",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-544",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-545",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-546",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-547",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-548",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-549",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-550",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-551",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-552",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-553",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-554",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-555",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-556",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-557",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-558",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-559",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-560",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-561",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-562",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-563",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-564",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-565",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-566",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-567",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-568",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-569",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-570",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-571",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-572",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-573",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-574",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-575",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-576",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-577",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-578",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-579",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-580",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-581",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-582",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-583",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-584",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-585",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-586",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-587",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-588",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-589",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-590",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-591",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-592",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-593",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-594",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-595",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-596",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-597",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-598",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-599",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-600",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-601",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-602",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-603",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-604",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-605",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-606",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-607",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-608",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-609",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-610",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-611",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-612",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-613",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-614",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-615",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-616",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-617",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-618",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-619",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-620",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-621",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-622",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-623",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-624",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-625",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-626",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-627",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-628",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-629",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-630",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-631",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-632",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-633",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-634",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-635",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-636",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-637",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-638",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-639",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-640",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-641",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-642",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-643",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-644",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-645",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-646",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-647",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-648",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-649",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-650",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-651",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-652",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-653",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-654",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-655",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-656",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-657",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-658",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-659",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-660",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-661",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-662",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-663",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-664",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-665",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-666",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-667",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-668",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-669",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-670",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-671",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-672",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-673",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-674",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-675",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-676",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-677",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-678",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-679",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-680",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-681",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-682",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-683",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-684",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-685",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-686",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-687",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-688",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-689",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-690",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-691",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-692",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-693",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-694",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-695",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-696",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-697",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-698",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-699",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-700",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-701",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-702",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-703",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-704",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-705",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-706",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-707",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-708",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-709",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-710",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-711",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-712",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-713",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-714",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-715",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-716",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-717",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-718",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-719",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-720",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-721",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-722",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-723",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-724",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-725",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-726",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-727",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-728",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-729",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-730",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-731",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-732",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-733",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-734",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-735",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-736",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-737",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-738",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-739",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-740",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-741",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-742",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-743",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-744",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-745",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-746",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-747",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-748",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-749",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-750",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-751",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-752",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-753",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-754",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-755",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-756",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-757",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-758",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-759",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-760",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-761",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-762",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-763",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-764",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-765",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-766",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-767",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-768",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-769",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-770",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-771",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-772",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-773",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-774",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-775",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-776",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-777",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-778",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-779",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-780",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-781",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-782",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-783",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-784",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-785",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-786",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-787",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-788",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-789",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-790",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-791",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-792",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-793",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-794",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-795",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-796",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-797",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-798",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-799",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-800",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-801",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-802",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-803",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-804",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-805",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-806",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-807",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-808",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-809",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-810",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-811",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-812",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-813",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-814",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-815",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-816",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-817",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-chain-818",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-819",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-820",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-821",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-fork-822",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-823",
+      "model": "exact-solver",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-824",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-collider-825",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-826",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-827",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-828",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-mbias-829",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-830",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-831",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-832",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-instrument-833",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-834",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-835",
+      "model": "exact-solver",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-frontdoor-836",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-837",
+      "model": "exact-solver",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-838",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    },
+    {
+      "question_id": "q-backdoor-839",
+      "model": "exact-solver",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "exact",
+      "latency_ms": 0
+    }
+  ]
+}

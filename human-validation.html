@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reasoning Test</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f5f5;display:flex;justify-content:center;padding:40px 20px;min-height:100vh}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:32px;max-width:640px;width:100%}
+h2{font-size:18px;font-weight:600;color:#333;margin-bottom:6px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:14px}
+.tag.obs{background:#e8f4fd;color:#0369a1}
+.tag.ivn{background:#fef3c7;color:#92400e}
+.tag.cf{background:#f3e8ff;color:#6b21a8}
+.scenario{font-size:14px;color:#555;line-height:1.5;margin-bottom:16px;padding:12px;background:#fafafa;border-radius:8px;border-left:3px solid #ddd}
+.query{font-size:16px;font-weight:500;color:#222;line-height:1.4;margin-bottom:20px}
+.choices{display:flex;flex-direction:column;gap:10px}
+.choice{padding:14px 16px;border:1.5px solid #e0e0e0;border-radius:8px;cursor:pointer;font-size:15px;color:#333;background:#fff;transition:all .15s;text-align:left}
+.choice:hover{border-color:#888;background:#fafafa}
+.choice.selected{border-color:#2563eb;background:#eff6ff}
+.choice.correct{border-color:#16a34a;background:#f0fdf4}
+.choice.wrong{border-color:#dc2626;background:#fef2f2}
+.progress{height:4px;background:#e0e0e0;border-radius:2px;margin-bottom:24px;overflow:hidden}
+.progress-fill{height:100%;background:#2563eb;transition:width .3s;border-radius:2px}
+.counter{font-size:13px;color:#888;margin-bottom:8px}
+.results{text-align:center;padding:20px 0}
+.score{font-size:48px;font-weight:700;color:#2563eb;margin:16px 0}
+.score-label{font-size:16px;color:#555}
+.breakdown{margin:24px 0;text-align:left;font-size:14px;color:#444;line-height:1.8}
+.review{margin-top:24px;text-align:left}
+.review h3{font-size:15px;font-weight:600;margin-bottom:12px;color:#333}
+.review-item{padding:12px;border-radius:6px;margin-bottom:8px;font-size:13px;line-height:1.5}
+.review-item.correct{border-left:3px solid #16a34a;background:#f0fdf4}
+.review-item.wrong{border-left:3px solid #dc2626;background:#fef2f2}
+.review-item .rq{font-weight:500;margin-bottom:4px}
+.review-item .ra{color:#666}
+.btn{display:inline-block;padding:10px 24px;border-radius:6px;border:none;font-size:14px;font-weight:500;cursor:pointer;background:#2563eb;color:#fff;margin-top:16px}
+.btn:hover{background:#1d4ed8}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="card" id="app">
+  <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="counter" id="counter"></div>
+  <div id="questionArea"></div>
+  <div id="resultArea" class="hidden"></div>
+</div>
+<script>
+const QUESTIONS = [
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A company offers optional Training to employees and tracks their Performance.",query:"Among employees who COMPLETED the training, what percentage achieved HIGH performance?",choices:["44%","49%","12%","71%"],answer:1},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A company offers optional Training to employees and tracks their Performance.",query:"Among employees who did NOT take the training, what percentage achieved HIGH performance?",choices:["49%","27%","12%","63%"],answer:2},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"A company offers optional Training to employees and tracks their Performance.",query:"If the company FORCED every employee to complete the training, what percentage would achieve HIGH performance?",choices:["12%","23%","49%","81%"],answer:2},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"Researchers track education levels and income across a population.",query:"Among people with ADVANCED education, what percentage have HIGH income?",choices:["35%","20%","50%","65%"],answer:2},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"Researchers track education levels and income across a population.",query:"Among people with BASIC education, what percentage have HIGH income?",choices:["50%","35%","60%","20%"],answer:3},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"Researchers track education levels and income across a population.",query:"If the government PAID for everyone to get ADVANCED education, what percentage would have HIGH income?",choices:["35%","50%","20%","65%"],answer:0},
+  {kind:"counterfactual",tag:"CF",cls:"cf",scenario:"A person has BASIC education and LOW income.",query:"If that person had instead received ADVANCED education, what would their income PROBABLY be?",choices:["LOW","MEDIUM","HIGH","UNCLEAR"],answer:1},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A company evaluates candidates on talent and interview performance before hiring.",query:"Among HIRED candidates, what proportion had a STRONG interview?",choices:["50%","42%","69%","31%"],answer:2},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A company evaluates candidates on talent and interview performance before hiring.",query:"Among HIRED candidates, what proportion had HIGH talent?",choices:["50%","69%","31%","42%"],answer:1},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"A company evaluates candidates on talent and interview performance before hiring.",query:"If the company FORCED all hired candidates to have HIGH talent, what proportion would have had a STRONG interview?",choices:["50%","69%","31%","42%"],answer:0},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A clinical trial tracks a new drug, a biomarker, and patient recovery.",query:"Among patients who TOOK the drug and had a POSITIVE biomarker, what percentage achieved FULL recovery?",choices:["82%","12%","37%","55%"],answer:2},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"A clinical trial tracks a new drug, a biomarker, and patient recovery.",query:"If the trial GAVE the drug to ALL patients, what percentage would achieve FULL recovery?",choices:["36%","12%","55%","73%"],answer:0},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"A clinical trial tracks a new drug, a biomarker, and patient recovery.",query:"If the trial gave NO patients the drug, what percentage would achieve FULL recovery?",choices:["55%","12%","36%","32%"],answer:3},
+  {kind:"counterfactual",tag:"CF",cls:"cf",scenario:"A patient took the drug and made a FULL recovery.",query:"If that patient had NOT taken the drug, would they still have recovered?",choices:["Yes, likely","No","Maybe","Probably not"],answer:0},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A lottery randomly awards scholarships. Researchers track college attendance and later income.",query:"Among people who ATTENDED college, what percentage earn HIGH income?",choices:["38%","52%","25%","17%"],answer:0},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"A lottery randomly awards scholarships. Researchers track college attendance and later income.",query:"If the government FORCED everyone to attend college, what percentage would earn HIGH income?",choices:["38%","52%","29%","36%"],answer:3},
+  {kind:"observational",tag:"OBS",cls:"obs",scenario:"A hospital studies a new drug. Older patients and severe cases are more likely to get the drug, but also have worse recovery.",query:"Among patients who TOOK the drug, what percentage had GOOD recovery?",choices:["25%","52%","37%","63%"],answer:1},
+  {kind:"interventional",tag:"IVN",cls:"ivn",scenario:"A hospital studies a new drug. Older patients and severe cases are more likely to get the drug, but also have worse recovery.",query:"If the hospital GAVE the drug to ALL patients, what percentage would have GOOD recovery?",choices:["52%","63%","37%","25%"],answer:2},
+];
+
+const TOTAL = 12;
+let idx = 0;
+let correct = 0;
+let answers = [];
+let selectedQuestions = [];
+let finished = false;
+
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+
+function init(){
+  selectedQuestions = shuffle([...QUESTIONS]).slice(0,TOTAL);
+  render();
+}
+
+function render(){
+  if(finished){renderResults();return}
+  const q = selectedQuestions[idx];
+  document.getElementById('progressFill').style.width = `${((idx)/TOTAL)*100}%`;
+  document.getElementById('counter').textContent = `Question ${idx+1} of ${TOTAL}`;
+  const area = document.getElementById('questionArea');
+  area.innerHTML = `
+    <div class="tag ${q.cls}">${q.tag}</div>
+    <h2>${q.graph||''}</h2>
+    <div class="scenario">${q.scenario}</div>
+    <div class="query">${q.query}</div>
+    <div class="choices" id="choices"></div>
+  `;
+  const choicesDiv = document.getElementById('choices');
+  const letters = ['A','B','C','D'];
+  q.choices.forEach((c,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'choice';
+    btn.textContent = `${letters[i]}. ${c}`;
+    btn.onclick = ()=>select(i);
+    choicesDiv.appendChild(btn);
+  });
+}
+
+function select(i){
+  if(finished)return;
+  const q = selectedQuestions[idx];
+  const correctChoice = i === q.answer;
+  if(correctChoice)correct++;
+  answers.push({q,chosen:i,correct:correctChoice});
+  idx++;
+  if(idx >= TOTAL){
+    finished = true;
+    document.getElementById('progressFill').style.width = '100%';
+    render();
+  } else {
+    render();
+  }
+}
+
+function renderResults(){
+  document.getElementById('questionArea').innerHTML = '';
+  document.getElementById('counter').textContent = '';
+  const pct = Math.round((correct/TOTAL)*100);
+  const area = document.getElementById('resultArea');
+  area.classList.remove('hidden');
+  area.innerHTML = `
+    <div class="results">
+      <div class="score-label">Your Score</div>
+      <div class="score">${correct}/${TOTAL}</div>
+      <div class="score-label">${pct}% correct</div>
+    </div>
+    <div class="breakdown">
+      <strong>Observational:</strong> ${countKind('observational')}/${countKindTotal('observational')} correct<br>
+      <strong>Interventional:</strong> ${countKind('interventional')}/${countKindTotal('interventional')} correct<br>
+      <strong>Counterfactual:</strong> ${countKind('counterfactual')}/${countKindTotal('counterfactual')} correct<br>
+    </div>
+    <button class="btn" onclick="location.reload()">Try Again</button>
+    <div class="review">
+      <h3>Review Answers</h3>
+      ${answers.map((a,i)=>{
+        const letters = ['A','B','C','D'];
+        const cls = a.correct ? 'correct' : 'wrong';
+        return `<div class="review-item ${cls}">
+          <div class="rq">${i+1}. ${a.q.query.substring(0,80)}...</div>
+          <div class="ra">You chose: ${letters[a.chosen]} (${a.q.choices[a.chosen]}) | Correct: ${letters[a.q.answer]} (${a.q.choices[a.q.answer]})</div>
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+}
+
+function countKind(k){return answers.filter(a=>a.q.kind===k&&a.correct).length}
+function countKindTotal(k){return answers.filter(a=>a.q.kind===k).length}
+
+init();
+</script>
+</body>
+</html>

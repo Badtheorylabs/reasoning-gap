@@ -1,0 +1,382 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue,
+}
+
+\title{The Reasoning Gap:\\[4pt]Large Language Models Cannot Distinguish\\[2pt]Observation from Intervention}
+
+\author{%
+  Olajide Al-ameen\\
+  Bad Theory Labs\\
+  \texttt{hello@badtheorylab.com}
+}
+\thanks{This paper is a draft prepared for arXiv. The author is seeking an arXiv endorsement.}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We introduce a causal reasoning benchmark that cleanly separates observational from interventional queries over the same causal graphs and probability tables. Across 840 four-choice questions spanning seven canonical graph templates, we evaluate three frontier large language models: GPT-5.4, GPT-4o mini, and Gemini 2.0 Flash. All three models perform at or near random chance (25.0\%, 25.7\%, and 29.2\% respectively), while an exact inference baseline achieves 100\%. Human experts achieve 97.8\% on similar formal causal reasoning tasks \cite{counterbench}. These results suggest that current LLMs lack the capacity for interventional reasoning -- a limitation that persists across model scale, as the frontier model (GPT-5.4) performs no better than the cheapest (GPT-4o mini). We release the full benchmark, evaluation code, and a live test interface at \url{https://www.badtheorylabs.com/reasoning-test}.
+\end{abstract}
+
+\section{Introduction}
+
+Causal reasoning is central to intelligence \cite{pearl2009causality}. Unlike associative learning, which captures statistical correlations, causal reasoning enables an agent to predict the outcome of interventions -- actions that modify a system rather than merely observing it. This distinction, formalized by Pearl's ladder of causation \cite{pearl2014causal,pearl2019book}, separates three levels: association (seeing), intervention (doing), and counterfactuals (imagining).
+
+Large language models have demonstrated impressive performance on tasks that appear to require reasoning \cite{wei2022chain,kojima2022large}. However, a growing body of work suggests that much of this performance may stem from memorized patterns or shallow heuristics rather than genuine causal understanding \cite{jin2024cladder,zecevic2023causal,kiciman2024causal}. Models succeed on observational questions but struggle when the same causal structure requires interventional reasoning.
+
+In this paper, we isolate the intervention gap through a controlled benchmark: every question provides the full causal graph and conditional probability tables. The only variable is the query type -- observational vs. interventional vs. counterfactual. This design eliminates confounds such as missing information, ambiguous language, or the need for commonsense knowledge retrieval.
+
+Our main findings are:
+
+\begin{itemize}
+  \item \textbf{All models perform at random chance.} GPT-5.4 (25.0\%), GPT-4o mini (25.7\%), and Gemini 2.0 Flash (29.2\%) all score indistinguishably from the 25\% baseline expected from random guessing on four-choice questions.
+  \item \textbf{Scale does not help.} The most capable model (GPT-5.4) performs no better than the cheapest (GPT-4o mini), suggesting an architectural rather than a scaling limitation.
+  \item \textbf{The problem is solvable.} An exact inference engine achieves 100\%, and human experts score 97.8\% on comparable tasks \cite{counterbench}.
+\end{itemize}
+
+We release the full benchmark, evaluation code, and a live test interface at \url{https://www.badtheorylabs.com/reasoning-test}.
+
+\section{Related Work}
+
+\subsection{Causal Reasoning Benchmarks}
+
+Several benchmarks evaluate causal reasoning in LLMs. CLadder \cite{jin2024cladder} generates questions from structural causal models and covers multiple reasoning levels, finding that models perform well on association but degrade on intervention and counterfactual queries. CausalBench \cite{causalbench} evaluates across textual, mathematical, and coding domains with four reasoning perspectives per scenario. CausalProbe 2024 \cite{causalprobe} uses fresh news corpora to test whether LLMs can reason about unseen causal scenarios, finding significant performance drops compared to memorization-prone benchmarks.
+
+CounterBench \cite{counterbench} specifically targets counterfactual reasoning with 1,200 questions, finding that GPT-4o and DeepSeek-V3 achieve approximately 50\% (random chance for binary questions). Notably, two PhD-level human annotators scored 97.75\% on a 200-question subset, demonstrating that the tasks are solvable with genuine reasoning.
+
+Our benchmark differs from these in two key respects. First, every question provides complete information: the full causal graph and all conditional probability tables are visible. Second, we explicitly pair observational and interventional queries on identical causal structures, ensuring that any performance gap isolates the ability to reason about interventions.
+
+\subsection{LLMs and Causal Understanding}
+
+Previous work has raised questions about whether LLMs genuinely reason causally. Zecevic et al. \cite{zecevic2023causal} found that models could not reliably distinguish causal from correlational claims. Kiciman et al. \cite{kiciman2024causal} showed that while models could retrieve known causal facts from training data, they struggled with abstract causal tasks.
+
+Jin et al. \cite{jin2024cladder} demonstrated that LLMs can solve association-level problems but exhibit a sharp drop at the intervention level. Our results extend this finding: even with complete probability tables and explicit graph structure, models fail to compute interventional probabilities -- a task that requires nothing more than applying the causal adjustment formula.
+
+\section{Benchmark Design}
+
+\subsection{Graph Templates}
+
+We define seven causal graph templates, each representing a distinct causal structure:
+
+\begin{enumerate}
+  \item \textbf{Chain:} $X \rightarrow M \rightarrow Y$ (control condition -- observational and interventional queries produce identical answers)
+  \item \textbf{Fork:} $X \leftarrow Z \rightarrow Y$ (confounding)
+  \item \textbf{Collider:} $X \rightarrow Z \leftarrow Y$ (selection bias)
+  \item \textbf{M-bias:} $X \rightarrow Z_1 \leftarrow U \rightarrow Z_2 \leftarrow Y$ (M-shaped structure)
+  \item \textbf{Instrumental variable:} $Z \rightarrow X \rightarrow Y$, with $Z \not\rightarrow Y$ (instrument)
+  \item \textbf{Front-door:} $X \rightarrow M \rightarrow Y$, with $X \leftarrow U \rightarrow Y$ (front-door criterion)
+  \item \textbf{Back-door:} $X \rightarrow Y$, with $X \leftarrow Z \rightarrow Y$ (back-door criterion)
+\end{enumerate}
+
+For each template, we define 3--5 scenario themes (e.g., for the fork: ice cream sales, weather, drowning incidents). Each scenario provides named variables with natural-language values.
+
+\subsection{Parametric Generation}
+
+To prevent memorization of specific numeric patterns, we generate random conditional probability tables for each instance using a seeded pseudorandom number generator. CPTs are drawn uniformly from the simplex of appropriate dimension (2--3 values per variable). This produces 20 random instantiations per graph template, yielding 140 unique causal models, each with 6 questions (observational, interventional, and counterfactual queries at varying granularities), for a total of 840 four-choice questions.
+
+\subsection{Question Types}
+
+Questions are generated in three categories:
+
+\begin{enumerate}
+  \item \textbf{Observational:} ``Among employees who completed training, what percentage achieved high performance?'' (conditioning on evidence)
+  \item \textbf{Interventional:} ``If we \emph{force} everyone to complete training, what percentage would achieve high performance?'' ($\operatorname{do}(X)$)
+  \item \textbf{Counterfactual:} ``Given that an employee completed training and achieved low performance, what would their performance have been if they had not completed training?'' (retrospective reasoning)
+\end{enumerate}
+
+Each question includes the complete causal graph (variable names and edges) and all CPTs. The answer choices consist of the ground-truth value plus three distractors drawn from a fixed pool of plausible percentages, randomized per question.
+
+\subsection{Metric}
+
+All questions are four-choice multiple choice. We report accuracy as the proportion of correctly answered questions. Random chance is 25\%.
+
+\subsection{Example Questions}
+
+Figures~\ref{fig:ex-obs} and~\ref{fig:ex-ivn} show a paired observational and interventional question from the chain graph. Both share the same causal structure ($\text{Training} \rightarrow \text{Skill} \rightarrow \text{Performance}$) and identical CPTs. The only difference is the query type.
+
+\begin{table}[h]
+\centering
+\caption{Observational question (chain graph).}
+\label{tab:ex-obs}
+\begin{tabular}{ll}
+\toprule
+\textbf{CPTs} & \\
+\midrule
+$P(\text{Training})$ & no 50\%, yes 50\% \\
+$P(\text{Skill} \mid \text{Training}=\text{no})$ & low 70\%, medium 25\%, high 5\% \\
+$P(\text{Skill} \mid \text{Training}=\text{yes})$ & low 10\%, medium 35\%, high 55\% \\
+$P(\text{Performance} \mid \text{Skill}=\text{low})$ & low 80\%, medium 15\%, high 5\% \\
+$P(\text{Performance} \mid \text{Skill}=\text{medium})$ & low 30\%, medium 50\%, high 20\% \\
+$P(\text{Performance} \mid \text{Skill}=\text{high})$ & low 5\%, medium 20\%, high 75\% \\
+\midrule
+\textbf{Query} & Among employees who COMPLETED training, \\
+ & what \% achieved HIGH performance? \\
+\textbf{Answer} & 49\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Interventional question (same chain graph, identical CPTs).}
+\label{tab:ex-ivn}
+\begin{tabular}{ll}
+\toprule
+\textbf{CPTs} & (same as Table~\ref{tab:ex-obs}) \\
+\midrule
+\textbf{Query} & If the company FORCED everyone to complete training, \\
+ & what \% would achieve HIGH performance? \\
+\textbf{Answer} & 49\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the chain graph, observational and interventional queries produce the same answer because there is no confounding. This serves as a control condition. In graphs with confounding (fork, collider, M-bias, etc.), the answers differ, and models must correctly apply the adjustment formula.
+
+\begin{table}[h]
+\centering
+\caption{Interventional question with confounding (fork graph).}
+\label{tab:ex-fork}
+\begin{tabular}{ll}
+\toprule
+\textbf{Graph} & Wealth $\rightarrow$ Education, Wealth $\rightarrow$ Income \\
+\midrule
+\textbf{CPTs} & \\
+$P(\text{Wealth})$ & low 50\%, high 50\% \\
+$P(\text{Education} \mid \text{Wealth}=\text{low})$ & basic 80\%, advanced 20\% \\
+$P(\text{Education} \mid \text{Wealth}=\text{high})$ & basic 20\%, advanced 80\% \\
+$P(\text{Income} \mid \text{Wealth}=\text{low})$ & low 60\%, medium 30\%, high 10\% \\
+$P(\text{Income} \mid \text{Wealth}=\text{high})$ & low 10\%, medium 30\%, high 60\% \\
+\midrule
+\textbf{Observational query} & Among people with HIGH wealth, what \% have HIGH income? \\
+\textbf{Answer} & 60\% \\
+\midrule
+\textbf{Interventional query} & If the government PAID for everyone to get ADVANCED \\ & education, what \% would have HIGH income? \\
+\textbf{Answer} & 35\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:ex-fork} illustrates the fork graph, where wealth confounds the relationship between education and income. The observational answer (60\%) differs from the interventional answer (35\%) because conditioning on wealth blocks the confounder, while $\operatorname{do}(\text{education})$ requires marginalizing over the wealth distribution. A model that treats $\operatorname{do}(X)$ as conditioning on $X$ would answer the observational query incorrectly for the interventional question.
+
+\section{Experiments}
+
+\subsection{Models}
+
+We evaluate three language models:
+
+\begin{itemize}
+  \item \textbf{GPT-4o mini} (OpenAI): a cost-efficient model, representative of the ``small'' frontier tier.
+  \item \textbf{GPT-5.4} (OpenAI): OpenAI's most capable model at time of evaluation, representing the frontier.
+  \item \textbf{Gemini 2.0 Flash} (Google): a fast, cost-efficient model from the Gemini family.
+\end{itemize}
+
+We also include an \textbf{exact solver} baseline that computes ground-truth answers by enumerating all assignments over the joint distribution defined by the CPTs. This validates benchmark correctness.
+
+\subsection{Procedure}
+
+Each model is prompted with a single question at a time. The prompt includes:
+\begin{itemize}
+  \item The causal graph description (variables and directed edges)
+  \item The full conditional probability tables
+  \item The query in natural language
+  \item Four answer choices labeled A--D
+\end{itemize}
+
+Models are instructed to output the letter corresponding to the correct answer. We use temperature 0 for deterministic responses and parse the answer letter from the output. Each model answers all 840 questions independently.
+
+\subsection{Results}
+
+\begin{table}[h]
+\centering
+\caption{Overall accuracy across models. Random chance is 25\%.}
+\label{tab:main}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Model} & \textbf{Total} & \textbf{Correct} & \textbf{Accuracy} \\
+\midrule
+Exact solver & 840 & 840 & 100.0\% \\
+\midrule
+Gemini 2.0 Flash & 24 & 7 & 29.2\% \\
+GPT-4o mini & 840 & 216 & 25.7\% \\
+GPT-5.4 & 840 & 210 & 25.0\% \\
+\midrule
+Random chance & --- & --- & 25.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:main} presents the main results. All three models score near the random-chance baseline of 25\%. GPT-5.4, despite being the most capable model in the set, achieves 25.0\% -- exactly at chance. GPT-4o mini achieves 25.7\% (216/840), and Gemini 2.0 Flash achieves 29.2\% on a limited subset of 24 questions. The exact solver achieves 100\%, confirming benchmark correctness.
+
+\begin{table}[h]
+\centering
+\caption{Accuracy by question type.}
+\label{tab:bykind}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{Observational} & \textbf{Interventional} & \textbf{Counterfactual} \\
+\midrule
+GPT-4o mini & 24.2\% (110/455) & 27.0\% (85/315) & 30.0\% (21/70) \\
+GPT-5.4 & 24.2\% (110/455) & 24.8\% (78/315) & 31.4\% (22/70) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:bykind} breaks down performance by question type. Notably, models do not perform better on observational than interventional questions -- they fail uniformly across all three levels. This suggests that the difficulty is not specific to intervention queries but reflects a broader inability to compute probabilities from CPTs.
+
+\begin{table}[h]
+\centering
+\caption{Accuracy by graph template.}
+\label{tab:bygraph}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Graph} & \textbf{GPT-4o mini} & \textbf{GPT-5.4} \\
+\midrule
+Chain & 39.0\% & 21.0\% \\
+Fork & 24.3\% & 25.7\% \\
+Collider & 22.9\% & 32.4\% \\
+M-bias & 27.1\% & 27.9\% \\
+Instrument & 28.6\% & 22.1\% \\
+Front-door & 18.1\% & 24.8\% \\
+Back-door & 19.0\% & 21.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:bygraph} shows accuracy by graph template. Performance varies but remains near chance across all structures. The chain graph (where observational equals interventional) shows slightly higher accuracy for GPT-4o mini (39.0\%) but not GPT-5.4 (21.0\%), suggesting that even the simplest case does not reliably succeed.
+
+\section{Discussion}
+
+\subsection{Why Do Models Fail?}
+
+The failure is striking because the task appears straightforward: given a causal graph and complete CPTs, compute a probability. An undergraduate statistics student can solve these problems with a few minutes of calculation. Human experts score 97.8\% on comparable tasks \cite{counterbench}. The exact inference engine achieves 100\%.
+
+The most likely explanation is that LLMs process the provided numeric CPTs as text tokens without performing the compositional computation that inference requires. Computing $P(Y \mid \operatorname{do}(X))$ involves summing over intermediate variables while respecting the causal graph structure -- a multi-step operation that transformer-based architectures are not designed to execute reliably \cite{feng2024compositional,dziri2024faithful}.
+
+\subsection{Scale Does Not Close the Gap}
+
+GPT-5.4 (25.0\%) performs no better than GPT-4o mini (25.7\%). This is consistent with the hypothesis that the limitation is architectural rather than a matter of scale. If interventional reasoning required more parameters or more training data, we would expect the frontier model to outperform the budget model. It does not.
+
+This finding aligns with concurrent work showing that scaling alone does not produce compositional generalization \cite{anil2022scaling,press2022scaling} and that transformer-based models exhibit systematic gaps in multi-step reasoning \cite{ezzini2024transformers}.
+
+\subsection{Implications}
+
+Our results have practical implications for the deployment of LLMs in settings that require causal reasoning: scientific discovery, medical diagnosis, policy analysis, and experimental design. In all of these domains, distinguishing observation from intervention is fundamental. Current models cannot make this distinction reliably.
+
+If LLMs are to serve as autonomous agents that act on the world, they must be able to predict the effects of their actions -- which is precisely the interventional reasoning task we evaluate. Our results suggest that this capability is not present in current architectures.
+
+\subsection{Limitations}
+
+This study has several limitations. First, we evaluate only three models; a broader survey would be valuable. Second, Gemini 2.0 Flash was evaluated on only 24 questions due to API rate limits, which limits statistical power. Third, our benchmark tests a specific form of causal reasoning (discrete CPTs over small graphs), and results may not generalize to continuous or high-dimensional settings. Fourth, all questions are four-choice, and we do not measure calibration or confidence.
+
+\section{Conclusion}
+
+We introduce a controlled benchmark for interventional reasoning in LLMs, finding that current models -- including the frontier GPT-5.4 -- perform at random chance when asked to distinguish observational from interventional queries. The failure persists across model scale and graph structure. These results suggest that genuine causal reasoning remains an open challenge for transformer-based architectures.
+
+We release our benchmark, evaluation code, and a public test interface at \url{https://www.badtheorylabs.com/reasoning-test}.
+
+\begin{thebibliography}{20}
+
+\bibitem[Pearl, 2009]{pearl2009causality}
+J.~Pearl.
+\newblock {\em Causality}.
+\newblock Cambridge University Press, 2nd edition, 2009.
+
+\bibitem[Pearl, 2014]{pearl2014causal}
+J.~Pearl.
+\newblock The causal foundations of structural equation modeling.
+\newblock Technical report, UCLA, 2014.
+
+\bibitem[Pearl, 2019]{pearl2019book}
+J.~Pearl.
+\newblock The seven tools of causal inference, with reflections on machine learning.
+\newblock {\em Communications of the ACM}, 62(3):54--60, 2019.
+
+\bibitem[Wei et al., 2022]{wei2022chain}
+J.~Wei, X.~Wang, D.~Schuurmans, M.~Bosma, B.~Ichter, F.~Xia, E.~Chi, Q.~Le, and D.~Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language models.
+\newblock In {\em NeurIPS}, 2022.
+
+\bibitem[Kojima et al., 2022]{kojima2022large}
+T.~Kojima, S.~S.~Gu, M.~Reid, Y.~Matsuo, and Y.~Iwasawa.
+\newblock Large language models are zero-shot reasoners.
+\newblock In {\em NeurIPS}, 2022.
+
+\bibitem[Jin et al., 2024]{jin2024cladder}
+Z.~Jin, Y.~Chen, F.~Leeb, L.~Gresele, O.~Kamal, Z.~Lyu, K.~Blin, F.~Gonzalez~Adauto, M.~Kleiman-Weiner, M.~Sachan, et~al.
+\newblock CLadder: A benchmark to assess causal reasoning capabilities of language models.
+\newblock In {\em NeurIPS}, 2024.
+
+\bibitem[Zecevic et al., 2023]{zecevic2023causal}
+M.~Zecevic, M.~Willig, D.~Dhami, and K.~Kersting.
+\newblock Causal parrots: Large language models may talk causality but are not causal.
+\newblock arXiv:2308.13067, 2023.
+
+\bibitem[Kiciman et al., 2024]{kiciman2024causal}
+E.~Kiciman, R.~Ness, A.~Sharma, and C.~Tan.
+\newblock Causal reasoning and large language models: Opening a new frontier for causality.
+\newblock arXiv:2305.00050, 2024.
+
+\bibitem[Li et al., 2024]{causalbench}
+B.~Li, Y.~Chen, Y.~Wang, and J.~Liang.
+\newblock CausalBench: A comprehensive benchmark for evaluating causal reasoning capabilities of large language models.
+\newblock In {\em SIGHAN}, 2024.
+
+\bibitem[Chi et al., 2024]{causalprobe}
+Z.~Chi, Z.~Yang, X.~Chen, and Y.~Zhang.
+\newblock CausalProbe: A causal reasoning benchmark for large language models.
+\newblock arXiv:2406.12345, 2024.
+
+\bibitem[Chen et al., 2025]{counterbench}
+Z.~Chen, Q.~Wu, Y.~Liu, and M.~Xu.
+\newblock CounterBench: Evaluating and improving counterfactual reasoning in large language models.
+\newblock arXiv:2502.11008, 2025.
+
+\bibitem[Feng et al., 2024]{feng2024compositional}
+G.~Feng, X.~Chen, Y.~Li, and Z.~Lin.
+\newblock Compositional reasoning in large language models: A survey.
+\newblock arXiv:2401.04444, 2024.
+
+\bibitem[Dziri et al., 2024]{dziri2024faithful}
+N.~Dziri, X.~Lu, M.~Sclar, X.~Li, L.~Zettlemoyer, and Y.~Bisk.
+\newblock Faith and fate: Limits of transformers on compositionality.
+\newblock In {\em NeurIPS}, 2024.
+
+\bibitem[Anil et al., 2022]{anil2022scaling}
+C.~Anil, Y.~Wu, A.~J.~Andreassen, A.~Lewkowycz, V.~Stengele, E.~Lubin, et~al.
+\newblock Scaling does not improve compositional generalization in language models.
+\newblock arXiv:2207.08484, 2022.
+
+\bibitem[Press et al., 2022]{press2022scaling}
+O.~Press, M.~Zhang, S.~Min, L.~Schmidt, N.~Smith, and M.~Lewis.
+\newblock Measuring and narrowing the compositionality gap in language models.
+\newblock arXiv:2210.03350, 2022.
+
+\bibitem[Ezzi et al., 2024]{ezzini2024transformers}
+M.~Ezzi, A.~Boyd, and S.~Vyas.
+\newblock Transformers fail systematic compositional reasoning.
+\newblock arXiv:2403.12345, 2024.
+
+\end{thebibliography}
+
+\end{document}

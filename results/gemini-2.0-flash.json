@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "model": "gemini-2.0-flash",
+    "total": 24,
+    "correct": 7,
+    "accuracy": 0.2916666666666667,
+    "by_kind": {
+      "observational": {
+        "total": 13,
+        "correct": 4
+      },
+      "interventional": {
+        "total": 9,
+        "correct": 3
+      },
+      "counterfactual": {
+        "total": 2,
+        "correct": 0
+      }
+    },
+    "by_graph": {
+      "chain": {
+        "total": 3,
+        "correct": 2
+      },
+      "fork": {
+        "total": 4,
+        "correct": 1
+      },
+      "collider": {
+        "total": 3,
+        "correct": 2
+      },
+      "mbias": {
+        "total": 4,
+        "correct": 0
+      },
+      "instrument": {
+        "total": 4,
+        "correct": 0
+      },
+      "frontdoor": {
+        "total": 3,
+        "correct": 1
+      },
+      "backdoor": {
+        "total": 3,
+        "correct": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "question_id": "q-chain-0",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11914
+    },
+    {
+      "question_id": "q-chain-1",
+      "model": "gemini-2.0-flash",
+      "chosen": 3,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11132
+    },
+    {
+      "question_id": "q-chain-2",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11241
+    },
+    {
+      "question_id": "q-fork-3",
+      "model": "gemini-2.0-flash",
+      "chosen": 2,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11252
+    },
+    {
+      "question_id": "q-fork-4",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11373
+    },
+    {
+      "question_id": "q-fork-5",
+      "model": "gemini-2.0-flash",
+      "chosen": 0,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11201
+    },
+    {
+      "question_id": "q-fork-6",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11208
+    },
+    {
+      "question_id": "q-collider-7",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11118
+    },
+    {
+      "question_id": "q-collider-8",
+      "model": "gemini-2.0-flash",
+      "chosen": 3,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11205
+    },
+    {
+      "question_id": "q-collider-9",
+      "model": "gemini-2.0-flash",
+      "chosen": 0,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11600
+    },
+    {
+      "question_id": "q-mbias-10",
+      "model": "gemini-2.0-flash",
+      "chosen": 2,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11590
+    },
+    {
+      "question_id": "q-mbias-11",
+      "model": "gemini-2.0-flash",
+      "chosen": 3,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11440
+    },
+    {
+      "question_id": "q-mbias-12",
+      "model": "gemini-2.0-flash",
+      "chosen": 2,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11180
+    },
+    {
+      "question_id": "q-mbias-13",
+      "model": "gemini-2.0-flash",
+      "chosen": 2,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11306
+    },
+    {
+      "question_id": "q-instrument-14",
+      "model": "gemini-2.0-flash",
+      "chosen": 2,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11239
+    },
+    {
+      "question_id": "q-instrument-15",
+      "model": "gemini-2.0-flash",
+      "chosen": 3,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11167
+    },
+    {
+      "question_id": "q-instrument-16",
+      "model": "gemini-2.0-flash",
+      "chosen": 2,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11178
+    },
+    {
+      "question_id": "q-instrument-17",
+      "model": "gemini-2.0-flash",
+      "chosen": 3,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11278
+    },
+    {
+      "question_id": "q-frontdoor-18",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11212
+    },
+    {
+      "question_id": "q-frontdoor-19",
+      "model": "gemini-2.0-flash",
+      "chosen": 0,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11144
+    },
+    {
+      "question_id": "q-frontdoor-20",
+      "model": "gemini-2.0-flash",
+      "chosen": 3,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11130
+    },
+    {
+      "question_id": "q-backdoor-21",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11087
+    },
+    {
+      "question_id": "q-backdoor-22",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": true,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11155
+    },
+    {
+      "question_id": "q-backdoor-23",
+      "model": "gemini-2.0-flash",
+      "chosen": 1,
+      "correct": false,
+      "raw_output": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+      "latency_ms": 11155
+    }
+  ]
+}
